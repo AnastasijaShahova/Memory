@@ -1,6 +1,6 @@
 #pragma once
 #include <cassert>
-//#include <windows.h>
+#include <windows.h>
 
 #include "FixedSizeAllocator.h"
 #include "CoalesceAllocator.h"
