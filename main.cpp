@@ -21,7 +21,6 @@ int main()
     int* p6 = (int*)allocator.alloc(sizeof(int) * 500);
     int* pOS = (int*)allocator.alloc(sizeof(int) * 10485760);
 
-    std::cout << "-----CoalesceAllocTest-----" << std::endl;
 
     allocator.free(p2);
     allocator.dumpBlocks();
@@ -35,14 +34,10 @@ int main()
     int* p7 = (int*)allocator.alloc(4024);
     allocator.dumpBlocks();
 
-    std::cout << "-----FSAllocTest-----" << std::endl;
-
     allocator.free(pFSAsmall1);
     allocator.free(pFSAbig2);
     allocator.dumpBlocks();
     allocator.dumpStat();
-
-    std::cout << "-----OSAllocTest-----" << std::endl;
 
     allocator.free(pOS);
 
